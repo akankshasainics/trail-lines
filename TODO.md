@@ -1,0 +1,5 @@
+- [ ] Github
+- [ ] Publish to crates.io
+- [ ] Github CI to automatically publish to crates
+- [ ] Github CI to build windows/linux executable in releases
+- [ ] Write README
