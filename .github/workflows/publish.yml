@@ -1,8 +1,5 @@
 on:
   push:
-    # Pattern matched against refs/tags
-    tags:        
-      - 'TODO'          # Push events to every tag not containing TODO
 
 name: Publish
 
