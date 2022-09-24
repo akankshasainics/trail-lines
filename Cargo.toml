@@ -2,7 +2,7 @@
 name = "trail_lines"
 version = "0.1.0"
 edition = "2021"
-license = "MIT OR Apache-2.0"
+license-file = "LICENSE"
 description = "Trail lines displays last n lines of given standard input"
 repository = "https://github.com/akankshasainics/trail-lines"
 readme = "README.md"
