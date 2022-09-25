@@ -7,12 +7,11 @@ use crossterm::{
 use std::collections::VecDeque;
 use clap::Parser;
 
-/// Simple program to greet a person
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
 struct Args {
 
-   /// Number of lines to show
+   /// Number of lines to display at a time
    #[clap(short = 'l', long = "lines", value_parser, default_value_t = 5)]
    lines: usize,
 }
