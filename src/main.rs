@@ -1,19 +1,15 @@
-use std::io::{stdout, stdin, BufRead};
-use crossterm::{terminal::ClearType, cursor::MoveUp};
-use crossterm::{
-    ExecutableCommand, Result,
-    terminal::Clear
-};
-use std::collections::VecDeque;
 use clap::Parser;
+use crossterm::{cursor::MoveUp, terminal::ClearType};
+use crossterm::{terminal::Clear, ExecutableCommand, Result};
+use std::collections::VecDeque;
+use std::io::{stdin, stdout, BufRead};
 
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
 struct Args {
-
-   /// Number of lines to display at a time
-   #[clap(short = 'l', long = "lines", value_parser, default_value_t = 5)]
-   lines: usize,
+    /// Number of lines to display at a time
+    #[clap(short = 'l', long = "lines", value_parser, default_value_t = 5)]
+    lines: usize,
 }
 
 fn main() -> Result<()> {
@@ -39,8 +35,8 @@ fn main() -> Result<()> {
                 stdout().execute(Clear(ClearType::CurrentLine))?;
             }
             println!("{}", line);
-        } 
+        }
         moves = deque.len() as u16;
-    } 
+    }
     Ok(())
 }
