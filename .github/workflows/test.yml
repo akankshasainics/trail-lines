@@ -22,8 +22,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: "Print version"
       run: |
-         echo "::set-output name=TAG_NAME::$(cargo pkgid | cut -d# -f2 | cut -d: -f2)"
-         echo $(cargo pkgid | cut -d# -f2 | cut -d: -f2)
+         echo "::set-output name=TAG_NAME::$()"
+         echo $(cat cargo.toml | grep "^version" | sed "s/version = //g" || sed 's/"//g')
          cargo pkgid
       id: version
     - name: "call action"
