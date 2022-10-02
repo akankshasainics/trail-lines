@@ -101,10 +101,15 @@ jobs:
           cd target/${{ matrix.target }}/release          
           tar czvf ../../../trail-${{ matrix.target }}.tar.gz trail 
           cd -
-          
+      - name: Set version
+        uses: actions/checkout@v1 
+        run: |
+         echo "::set-output name=TAG_NAME::$(cat Cargo.toml | grep "^version" | sed "s/version = //g" || sed 's/"//g')"
+        id: version     
       - name: Publish
         uses: softprops/action-gh-release@v1
         with:
+            name: ${{ steps.version.outputs.TAG_NAME }} 
             files: 'trail*'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
