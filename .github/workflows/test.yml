@@ -23,6 +23,7 @@ jobs:
     - name: "Print version"
       run: |
          echo "::set-output name=TAG_NAME::$(cargo pkgid | cut -d# -f2 | cut -d: -f2)"
+         echo $(cargo pkgid | cut -d# -f2 | cut -d: -f2)
       id: version
     - name: "call action"
       id: last_release
