@@ -23,7 +23,7 @@ jobs:
     - name: "Print version"
       run: |
          echo "::set-output name=TAG_NAME::$()"
-         echo $(cat cargo.toml | grep "^version" | sed "s/version = //g" || sed 's/"//g')
+         echo $(cat Cargo.toml | grep "^version" | sed "s/version = //g" || sed 's/"//g')
          cargo pkgid
       id: version
     - name: "call action"
