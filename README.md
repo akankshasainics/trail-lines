@@ -4,10 +4,16 @@
 
 It behaves exactly as `tail` command if the input is not a continuos stream. Otherwise it behaves as if tail is being run at every point of time.
 
+Example: `ping` command output on screen
+
+![continous_stream](continous_stream.gif)
+
+
+Example: `ls` command output on screen
+
 ![single_stream](single_stream.gif)
 
 
-![continous_stream](continous_stream.gif)
 
 
 
