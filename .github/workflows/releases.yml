@@ -101,8 +101,8 @@ jobs:
           cd target/${{ matrix.target }}/release          
           tar czvf ../../../trail-${{ matrix.target }}.tar.gz trail 
           cd -
+      - uses: actions/checkout@v1 
       - name: Set version
-        uses: actions/checkout@v1 
         run: |
          echo "::set-output name=TAG_NAME::$(cat Cargo.toml | grep "^version" | sed "s/version = //g" || sed 's/"//g')"
         id: version     
