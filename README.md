@@ -13,8 +13,8 @@ Example: `ls` command output on screen
 
 ![single_stream](single_stream.gif)
 
-
-
+## Installation
+`cargo install trail_lines`
 
 
 ## Arguments
